@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "NunitoSans";
+    font-weight:normal;
+    src: url("./NunitoSans/NunitoSans-Regular.ttf");
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: NunitoSans, Arial, Helvetica, sans-serif;
+    /* Light Mode */
+    --backgroundColor: hsl(0, 0%, 90%);
+    --textColor: hsl(200, 15%, 8%);
+    --componentsColor: hsl(0, 0%, 100%);
+    --inputColorText: hsl(0, 0%, 52%);
+
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+.darkMode{
+    --backgroundColor: hsl(207, 26%, 17%);
+    --textColor: hsl(0, 0%, 100%);
+    --componentsColor: hsl(209, 23%, 22%);
+    --inputColorText: hsl(0, 0%, 100%);
+}
+
+/* header */
+
+header{
+    background-color: var(--componentsColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+#btn-changeMode{
+    border-color: var(--textColor);
+    color: var(--textColor);
+}
+
+#btn-changeMode:hover,:focus{
+    background-color: var(--textColor);
+    color: var(--componentsColor);
+}
+
+/* myBtn */
+
+.myBtn{
+    background-color: var(--componentsColor);
+    color: var(--textColor);
+}
+
+.myBtn:hover,:focus{
+    background-color: var(--textColor);
+    color: var(--componentsColor);
+}
+
+/* section */
+
+.infoBox h3{
+    margin-top: 2rem;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.flagBox img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.detailsBox{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2em 4rem;
+}
+
+.borders{
+    display: flex;
+    flex-direction: column;
+}
+
+.btnGroup{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap: 1rem;
+}
+
+/* footer */
+
+footer{
+    margin-top: auto;
+    background-color: var(--componentsColor);
+    text-align: center;
+}
+
+/*
+*************
+MEDIA QUERIES
+*************
+*/
+
+@media only screen and (min-width: 500px) {
+
+    .btnGroup{
+        grid-template-columns: repeat(3,auto);
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    .infoBox h3{
+        margin-top: 0;
+    }
+
+    .btnGroup{
+        grid-template-columns: repeat(4,auto);
+    }
+
+    section{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .detailsBox{
+        grid-template-columns: repeat(2,auto);
+    }
+}
