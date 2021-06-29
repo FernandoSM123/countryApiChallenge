@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "NunitoSans";
+    font-weight:normal;
+    src: url("../assets/NunitoSans/NunitoSans-Regular.ttf");
+}
+
+.mainContainer{
+    font-family: NunitoSans, Arial, Helvetica, sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Light Mode */
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+.darkMode{
+    --backgroundColor: hsl(207, 26%, 17%);
+    --textColor: hsl(0, 0%, 100%);
+    --componentsColor: hsl(209, 23%, 22%);
+    --inputColorText: hsl(0, 0%, 100%);
+}
+
+/* header */
+
+header{
+    background-color: var(--componentsColor);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+#btn-changeMode{
+    border-color: var(--textColor);
+    color: var(--textColor);
+}
+
+#btn-changeMode:hover,:focus{
+    background-color: var(--textColor);
+    color: var(--componentsColor);
+}
+
+/*footer*/
+
+footer{
+    background-color: var(--componentsColor);
+    text-align: center;
+    margin-top: auto;
+}

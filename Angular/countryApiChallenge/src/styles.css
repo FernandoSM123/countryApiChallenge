@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    /* Light Mode */
+    --backgroundColor: hsl(0, 0%, 90%);
+    --textColor: hsl(200, 15%, 8%);
+    --componentsColor: hsl(0, 0%, 100%);
+    --inputColorText: hsl(0, 0%, 52%);
+}
+
+.darkMode{
+    --backgroundColor: hsl(207, 26%, 17%);
+    --textColor: hsl(0, 0%, 100%);
+    --componentsColor: hsl(209, 23%, 22%);
+    --inputColorText: hsl(0, 0%, 100%);
+}
+
+html,body,app-root{
+    height: 100%;
+}

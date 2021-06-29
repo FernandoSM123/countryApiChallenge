@@ -1,0 +1,111 @@
+/* nav */
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.searchBar{
+    background-color: var(--componentsColor);
+}
+
+.searchBar span{
+    background-color: var(--componentsColor);
+    color: var(--textColor);
+}
+
+.searchBar input[type="text"]{
+    color: var(--inputColorText);
+    background-color: var(--componentsColor);
+}
+
+.dropList button{
+    background-color: var(--componentsColor);
+    color: var(--textColor);
+}
+
+.dropList button:hover,:focus{
+    background-color: var(--textColor);
+    color: var(--componentsColor);
+}
+
+.dropList ul{
+    background-color: var(--componentsColor);
+}
+
+.dropList ul li a{
+    color: var(--textColor);
+}
+
+.dropList ul li a:hover,:focus{
+    background-color: var(--textColor);
+    color: var(--componentsColor);
+}
+
+
+/* section */
+
+.gridContainer
+{
+   display: grid;
+   grid-template-columns: auto;
+}
+
+.countryCard{
+    background-color: var(--componentsColor);
+}
+
+/*
+*************
+MEDIA QUERIES
+*************
+*/
+
+@media only screen and (min-width: 500px) {
+
+
+    .gridContainer{
+        grid-template-columns: repeat(2,auto);
+        grid-column-gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+
+
+    .gridContainer{
+        grid-template-columns: repeat(3,auto);
+    }
+}
+
+@media only screen and (min-width: 950px) {
+
+    /* nav */
+
+    nav{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .searchBar{
+        width: 40%;
+    }
+
+    .dropList{
+        width: 20%;
+    }
+
+    .dropList button{
+        width: 100%;
+    }
+
+    .dropList ul{
+        width: 100%;
+    }
+
+    /* section */
+    
+    .gridContainer{
+        grid-template-columns: repeat(4, auto);
+    }
+  }
