@@ -40,7 +40,7 @@ header div{
     color: var(--textColor);
 }
 
-#btn-changeMode:hover,:focus{
+#btn-changeMode:hover{
     background-color: var(--textColor);
     color: var(--componentsColor);
 }

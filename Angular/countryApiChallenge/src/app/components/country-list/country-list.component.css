@@ -53,8 +53,13 @@ nav{
 
 .countryCard{
     background-color: var(--componentsColor);
+    cursor: pointer;
+    transition: .3s all;
 }
 
+.countryCard:hover,:focus{
+    transform: scale(1.05);
+}
 /*
 *************
 MEDIA QUERIES
