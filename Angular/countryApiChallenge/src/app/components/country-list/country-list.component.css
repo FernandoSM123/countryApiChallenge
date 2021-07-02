@@ -24,7 +24,7 @@ nav{
     color: var(--textColor);
 }
 
-.dropList button:hover,:focus{
+.dropList button:hover{
     background-color: var(--textColor);
     color: var(--componentsColor);
 }
@@ -37,7 +37,7 @@ nav{
     color: var(--textColor);
 }
 
-.dropList ul li a:hover,:focus{
+.dropList ul li a:hover{
     background-color: var(--textColor);
     color: var(--componentsColor);
 }
@@ -57,7 +57,12 @@ nav{
     transition: .3s all;
 }
 
-.countryCard:hover,:focus{
+.countryCard a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.countryCard:hover{
     transform: scale(1.05);
 }
 /*

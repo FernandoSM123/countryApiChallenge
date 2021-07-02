@@ -25,6 +25,7 @@
   <section class="mt-5 px-5">
     <div class="gridContainer">
       <div class="countryCard card shadow rounded mb-5" *ngFor="let country of countries;">
+        <a [routerLink]="['/countryData',country.name]">
         <img src="{{country.flag}}" class="card-img-top" alt="{{country.name}}">
         <div class="card-body">
           <h5 class="card-title fw-bold mb-3">{{country.name}}</h5>
@@ -32,6 +33,7 @@
           <p class="card-text"><b>Region: </b>{{country.region}}</p>
           <p class="card-text"><b>Capital: </b>{{country.capital}}</p>
         </div>
+      </a>
       </div>
     </div>
   </section>

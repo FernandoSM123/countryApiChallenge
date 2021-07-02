@@ -17,8 +17,6 @@ export class CountryListComponent implements OnInit {
   ngOnInit(): void {
     this.countryDataService.getData().subscribe(countryData => {
       this.countries=countryData;
-      console.log("COUNTRY-LIST COMPONENT");
-      console.log(this.countries);
     });
   }
 

@@ -1,48 +1,49 @@
-
 <!--Return button box-->
 <div class="p-4">
-    <button class="btn myBtn shadow px-4" id="returnBtn">
-        <span><i class="bi bi-arrow-left"></i> Back</span>
-    </button>
+    <a [routerLink]="['/countryList']">
+        <button class="btn myBtn shadow px-4" id="returnBtn">
+            <span><i class="bi bi-arrow-left"></i> Back</span>
+        </button>
+    </a>
 </div>
 
 <!--section-->
-<section class="my-4 px-4">
+<section class="my-4 px-4" *ngIf="country && countryBorders">
     <div class="flagBox">
-        <img src="../../../assets/German-flag.jpg" alt="countryFlag">
+        <img src="{{country.flag}}" alt="{{country.name}}">
     </div>
 
     <div class="infoBox">
-        <h3 class="mb-3">Belgium</h3>
+        <h3 class="mb-3">{{country.name}}</h3>
 
         <div class="detailsBox">
             <div>
-                <p><b>Native Name:</b> Belgie</p>
-                <p><b>Population:</b> Belgie</p>
-                <p><b>Region:</b> Belgie</p>
-                <p><b>Sub Region:</b> Belgie</p>
-                <p><b>Capital:</b> Belgie</p>
+                <p><b>Native Name:</b> {{country.nativeName}}</p>
+                <p><b>Population:</b> {{country.population}}</p>
+                <p><b>Region:</b> {{country.region}}</p>
+                <p><b>Sub Region:</b> {{country.subregion}}</p>
+                <p><b>Capital:</b> {{country.capital}}</p>
             </div>
 
             <div>
-                <p><b>Top Level Domain:</b> Belgie</p>
-                <p><b>Currencies:</b> Belgie</p>
-                <p><b>Languages:</b> Belgie</p>
+                <p><b>Top Level Domain:</b> {{country.topLevelDomain}}</p>
+                <!--Currencies-->
+                <b>Currencies:</b>
+                <ol class="ps-3">
+                    <li *ngFor="let currency of country.currencies;">{{currency.name}}</li>
+                </ol>
+                <!--Languages-->
+                <b>Languages:</b>
+                <ol class="ps-3">
+                    <li *ngFor="let language of country.languages;">{{language.name}}</li>
+                </ol>
             </div>
         </div>
 
         <div class="borders my-4">
             <h4 class="fw-b fs-5 mb-4">Borders Countries:</h4>
             <div class="btnGroup">
-                <button class="btn myBtn">France</button>
-                <button class="btn myBtn">France</button>
-                <button class="btn myBtn">France</button>
-                <button class="btn myBtn">France</button>
-                <button class="btn myBtn">France</button>
-                <button class="btn myBtn">France</button>
-                <button class="btn myBtn">France</button>
-                <button class="btn myBtn">France</button>
-                <button class="btn myBtn">France</button>
+                <a class="btn myBtn" *ngFor="let country of countryBorders;" [routerLink]="['/countryData',country.name]">{{country.name}}</a>
             </div>
         </div>
     </div>

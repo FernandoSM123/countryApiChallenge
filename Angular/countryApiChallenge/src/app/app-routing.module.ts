@@ -8,7 +8,7 @@ import { CountryDataComponent } from './components/country-data/country-data.com
 const routes: Routes = [
   {path:'',component:CountryListComponent}, //default route
   {path:'countryList',component:CountryListComponent},
-  {path:'countryData',component:CountryDataComponent}
+  {path:'countryData/:countryName',component:CountryDataComponent}
 ];
 
 @NgModule({
