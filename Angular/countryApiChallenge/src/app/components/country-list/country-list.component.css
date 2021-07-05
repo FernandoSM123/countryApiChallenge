@@ -5,6 +5,8 @@ nav{
     flex-direction: column;
 }
 
+/* searchBar */
+
 .searchBar{
     background-color: var(--componentsColor);
 }
@@ -19,27 +21,43 @@ nav{
     background-color: var(--componentsColor);
 }
 
-.dropList button{
+/* myBtn */
+
+.myBtn{
     background-color: var(--componentsColor);
     color: var(--textColor);
+    border: solid 1px var(--textColor);
 }
 
-.dropList button:hover{
+.myBtn:hover{
+    background-color: var(--textColor);
+    color: var(--componentsColor);
+    border: solid 1px var(--textColor);
+}
+
+/* dropList */
+
+.dropListBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.dropList{
+    background-color: var(--componentsColor);
+    color: var(--textColor);
+    width: 100%;
+    border: none;
+}
+
+.dropList:hover{
     background-color: var(--textColor);
     color: var(--componentsColor);
 }
 
-.dropList ul{
+.dropList option{
     background-color: var(--componentsColor);
-}
-
-.dropList ul li a{
     color: var(--textColor);
-}
-
-.dropList ul li a:hover{
-    background-color: var(--textColor);
-    color: var(--componentsColor);
 }
 
 
@@ -55,6 +73,7 @@ nav{
     background-color: var(--componentsColor);
     cursor: pointer;
     transition: .3s all;
+    max-width: 400px;
 }
 
 .countryCard a{
@@ -64,6 +83,22 @@ nav{
 
 .countryCard:hover{
     transform: scale(1.05);
+}
+
+/*pagination*/
+
+pagination-controls{
+    text-align: center;
+}
+
+.my-pagination /deep/ .ngx-pagination li:hover {
+    background: var(--textColor);
+    color: var(--componentsColor);
+}
+
+.my-pagination /deep/ .ngx-pagination li a:hover {
+    background: var(--textColor);
+    color: var(--componentsColor);
 }
 /*
 *************
@@ -101,16 +136,9 @@ MEDIA QUERIES
         width: 40%;
     }
 
-    .dropList{
+    .dropListBox{
         width: 20%;
-    }
-
-    .dropList button{
-        width: 100%;
-    }
-
-    .dropList ul{
-        width: 100%;
+        margin-top: 0;
     }
 
     /* section */

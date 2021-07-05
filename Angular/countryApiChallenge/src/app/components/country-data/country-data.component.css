@@ -5,7 +5,7 @@
     color: var(--textColor);
 }
 
-.myBtn:hover,:focus{
+.myBtn:hover{
     background-color: var(--textColor);
     color: var(--componentsColor);
 }
