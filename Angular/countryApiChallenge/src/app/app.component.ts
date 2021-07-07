@@ -14,6 +14,7 @@ export class AppComponent implements OnInit,AfterViewInit{
   title = 'countryApiChallenge';
   @ViewChild('mainContainer') mainContainer: ElementRef;
   @ViewChild('btnChangeMode') changeMode: ElementRef;
+  @ViewChild('overlay') overlay: ElementRef;
   public countries:Array<Country>;
 
   constructor(
@@ -25,10 +26,12 @@ export class AppComponent implements OnInit,AfterViewInit{
   ngOnInit(): void {
     this.getCountries().then(
       response =>{
+        this.overlay.nativeElement.style.display="none";
         this.countries=response;
         this.countryDataService.setData(this.countries); //Set informacion de los paises en el servicio
       },
       error => {
+        this.overlay.nativeElement.style.display="none";
         console.log(error);
       }
     );

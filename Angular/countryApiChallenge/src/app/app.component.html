@@ -1,19 +1,27 @@
-<div class="mainContainer" #mainContainer>
-<!-- header -->
-<header class="shadow p-4">
-  <h1 class="fs-4 fw-bold">Where in the world?</h1>
-  <div>
-    <button class="btn" id="btn-changeMode" #btnChangeMode>
-      <span><i class="bi bi-moon"></i> Dark Mode</span>
-    </button>
+<div class="overlay" #overlay>
+  <div class="loaderBox">
+    <div class="loader"></div>
+    <h3>Loading...</h3>
   </div>
-</header>
+</div>
 
-<!--routing-->
-<router-outlet *ngIf="countries"></router-outlet>
 
- <!-- footer -->
- <footer class="py-4 shadow">
-  <p>Created by: <u><b>FernandoSM123</b></u></p>
-</footer>
+<div class="mainContainer" #mainContainer>
+  <!-- header -->
+  <header class="shadow p-4">
+    <h1 class="fs-4 fw-bold">Where in the world?</h1>
+    <div>
+      <button class="btn" id="btn-changeMode" #btnChangeMode>
+        <span><i class="bi bi-moon"></i> Dark Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <!--routing-->
+  <router-outlet *ngIf="countries"></router-outlet>
+
+  <!-- footer -->
+  <footer class="py-4 shadow">
+    <p>Created by: <u><b>FernandoSM123</b></u></p>
+  </footer>
 </div>

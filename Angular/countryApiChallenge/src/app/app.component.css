@@ -45,6 +45,53 @@ header div{
     color: var(--componentsColor);
 }
 
+/* loadingAnimation */
+
+.overlay{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.loaderBox{
+    width: 80%;
+    height: 75%;
+    background-color:var(--componentsColor);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--componentsColor);
+}
+
+.loader {
+    border: 8px solid var(--backgroundColor);
+    border-top: 8px solid var(--textColor);
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    animation: spin 2s linear infinite;
+  }
+
+  .loaderBox h3{
+      margin-top: 1.5rem;
+      color: var(--textColor);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
 /*footer*/
 
 footer{
@@ -52,3 +99,18 @@ footer{
     text-align: center;
     margin-top: auto;
 }
+
+@media only screen and (min-width: 500px) {
+    .loader{
+        border-width: 16px;
+        border-top-width: 16px;
+        width: 128px;
+        height: 128px;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    .loaderBox{
+        width: 50%;
+    }
+  }

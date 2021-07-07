@@ -31,7 +31,19 @@ export class CountryDataComponent implements OnInit {
       //recorrer parametros de la URL
       this._route.params.subscribe((_params: Params) => {
         let countryName: string = _params.countryName;
+        //no se paso pais por la URL
+        if(countryName.length==0){
+          this._router.navigateByUrl("/countryList");
+          return;
+        }
+
         this.country = <Country>this.searchCountryForName(countryName);
+
+        //no se encontro el pais
+        if(typeof(this.country) === "undefined"){
+          this._router.navigateByUrl("/countryList");
+          return;
+        }
         //Obtener lista de paises (Bordes)
         this.searchBorderCountries();
       });
