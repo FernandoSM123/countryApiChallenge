@@ -47,9 +47,9 @@ export class CountryListComponent implements OnInit {
     });
   }
 
-  changeRegion(region: string) {
+  changeRegion(event: any) {
     this.filterCountries = [];
-    this.regionName = region;
+    this.regionName = event.target.value;
     this.filterCountriesByRegion();
     this.filterCountriesByName();
     this.page = 1;

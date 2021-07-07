@@ -8,13 +8,13 @@
   </div>
 
   <div class="dropListBox">
-  <select class="rounded shadow dropList fs-6 p-2">
-    <option (click)="changeRegion('All')">All</option>
-    <option (click)="changeRegion('Africa')">Africa</option>
-    <option (click)="changeRegion('Americas')">America</option>
-    <option (click)="changeRegion('Asia')">Asia</option>
-    <option (click)="changeRegion('Europe')">Europe</option>
-    <option (click)="changeRegion('Oceania')">Oceania</option>
+  <select class="rounded shadow dropList fs-6 p-2" (change)=" changeRegion($event)">
+    <option value="All">All</option>
+    <option value="Africa">Africa</option>
+    <option value="Americas">America</option>
+    <option value="Asia">Asia</option>
+    <option value="Europe">Europe</option>
+    <option value="Oceania">Oceania</option>
   </select>
 </div>
 </nav>
