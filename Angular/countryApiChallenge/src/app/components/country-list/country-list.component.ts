@@ -80,6 +80,11 @@ export class CountryListComponent implements OnInit {
 
   onPageChange(number: number) {
     this.page = number;
+    window.scrollTo({
+      top: 0,
+      left:0,
+      behavior:'smooth'
+    });
   }
 
   onPageBoundsCorrection(number: number) {
