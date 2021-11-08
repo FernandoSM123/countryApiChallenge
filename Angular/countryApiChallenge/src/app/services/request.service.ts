@@ -8,13 +8,14 @@ import { Country } from '../models/country';
 })
 export class RequestService {
 
+  private static readonly cors = "https://cors-anywhere-venky.herokuapp.com/"
 
   constructor(
     private http:HttpClient
   ) {}
 
   getCountries():Observable<Country[]> {
-    const path = "https://restcountries.eu/rest/v2/all";
+    const path = RequestService.cors+"https://restcountries.com/v2/all";
     return this.http.get<Country[]>(path);
   }
 }

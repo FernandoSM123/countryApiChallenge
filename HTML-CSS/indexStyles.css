@@ -96,7 +96,7 @@ nav{
 .gridContainer
 {
    display: grid;
-   grid-template-columns: auto;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .countryCard{
@@ -120,16 +120,7 @@ MEDIA QUERIES
 
 
     .gridContainer{
-        grid-template-columns: repeat(2,auto);
         grid-column-gap: 2rem;
-    }
-}
-
-@media only screen and (min-width: 750px) {
-
-
-    .gridContainer{
-        grid-template-columns: repeat(3,auto);
     }
 }
 
@@ -153,9 +144,5 @@ MEDIA QUERIES
 
     .dropList ul{
         width: 100%;
-    }
-
-    .gridContainer{
-        grid-template-columns: repeat(4, auto);
     }
   }
