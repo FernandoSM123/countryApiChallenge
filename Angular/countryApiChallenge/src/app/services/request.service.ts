@@ -15,7 +15,7 @@ export class RequestService {
   ) {}
 
   getCountries():Observable<Country[]> {
-    const path = RequestService.cors+"https://restcountries.com/v2/all";
+    const path = "https://restcountries.com/v2/all";
     return this.http.get<Country[]>(path);
   }
 }
